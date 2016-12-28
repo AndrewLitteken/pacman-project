@@ -14,7 +14,7 @@ EXEC = game
 FLAGS= -std=c++11
 
 $(EXEC): $(CLASS).o $(CLASS2).o $(CLASS3).o $(CLASS4).o $(MAIN).o
-	$(CMP) $(FLAGS) $(CLASS).o $(CLASS2).o $(CLASS3).o $(CLASS4).o gfxnew_mac.o -lX11 -I/opt/X11/include/ -L/opt/X11/lib/ $(MAIN).o -o $(EXEC)
+	$(CMP) $(FLAGS) $(CLASS).o $(CLASS2).o $(CLASS3).o $(CLASS4).o $(GRAPHICS) -lX11 -I/opt/X11/include/ -L/opt/X11/lib/ $(MAIN).o -o $(EXEC)
 
 $(CLASS).o: $(CLASS).cpp $(CLASS).h
 	$(CMP) $(FLAGS) -c $(CLASS).cpp -I/opt/X11/include/ -o $(CLASS).o
