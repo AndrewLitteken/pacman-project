@@ -6,4 +6,6 @@ This project requires XQuartz which can be found here: https://www.xquartz.org/i
 gfxnew_mac.o is required to be compiled on macOS.
 gfxnew.o is required on a Linux system.
 
-There are respective Makefiles for each.
+On macOS:
+>Step 1: Install XQuartz </br>
+>Step 2: Create a Sym Link: **ln -s /opt/include/X11 /usr/local/include/X11***
