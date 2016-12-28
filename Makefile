@@ -1,5 +1,11 @@
+UNAME := $(shell uname)
+ifeq ($(UNAME), Linux)
+	GRAPHICS = gfxnew.o
+else
+	GRAPHICS = gfxnew_mac.o
+endif
 CMP = g++
-CLASS2= ghost
+CLASS2 = ghost
 CLASS3 = pacman
 CLASS4 = board
 CLASS = game
